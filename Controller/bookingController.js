@@ -17,7 +17,7 @@ async function createPaymentSession(req,res){
                   const user=await userModel.findById(userId);
                   console.log(product);
                   console.log(user);
-                  const sessions=await stripeObj.checkout.sessions.create({
+                  const session=await stripeObj.checkout.sessions.create({
                     payment_method_types: ['card'],
                     // customer:user.name,
                     customer_email:user.email,
@@ -36,9 +36,9 @@ async function createPaymentSession(req,res){
                     mode: 'payment',
                     success_url: 'https://ecommerseee.herokuapp.com/',
                     cancel_url: 'https://ecommerseee.herokuapp.com/',
-                  })
+                  });
                   res.json({
-                      sessions
+                      session
                   })
               }
               catch(error){
