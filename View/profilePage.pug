@@ -1,0 +1,72 @@
+extend base
+block  content
+ .container-fluid.main(style='height:100vh;padding-left:0px;')
+  .d-block.d-md-none.menu
+    .bar
+  .expand-menu.nav.flex-column
+    a.nav-link.active.mt-auto(href='#')
+      i.far.fa-user-circle
+      |  Profile
+    a.nav-link(href='#')
+      i.far.fa-bell
+      |  Notifications
+    a.nav-link(href='#')
+      i.far.fa-file-alt
+      |  Billing Info
+    a.nav-link.mb-auto(href='#')
+      i.fas.fa-cogs
+      |  General
+  .row.align-items-center(style='height:100%')
+    .col-md-3.d-none.d-md-block(style='height:100%')
+      .container-fluid.nav.sidebar.flex-column
+        a.nav-link.active.mt-auto(href='#')
+          i.far.fa-user-circle
+          |  Profile
+        a.nav-link(href='#')
+          i.far.fa-bell
+          |  Notifications
+        a.nav-link(href='#')
+          i.far.fa-file-alt
+          |  Billing Info
+        a.nav-link.mb-auto(href='#')
+          i.fas.fa-cogs
+          |  General
+    .col-md-9
+      .container.content.clear-fix
+        h2.mt-5.mb-5 Profile Settings
+        .row(style='height:100%')
+          .col-md-3
+            .d-inline(href='#')
+              img(src='https://image.flaticon.com/icons/svg/236/236831.svg' width='130px' style='margin:0;')
+              br
+              p.pl-2.mt-2
+                a.btn(href='#' style='color:#8f9096;font-weight:600') Edit Picture
+          .col-md-9
+            .container
+              form
+                .form-group
+                  label(for='fullName') Full Name
+                  input#fullName.form-control(type='text')
+                .form-group
+                  label(for='email') Email
+                  input#email.form-control(type='email')
+                .form-group
+                  label(for='pass') Password
+                  input#pass.form-control(type='password')
+                .form-group
+                  label(for='birthday') Birthday
+                  input#birthday.form-control(type='date')
+                .row.mt-5
+                  .col
+                    button.btn.btn-primary.btn-block(type='button') Save Changes
+                  .col
+                    button.btn.btn-default.btn-block(type='button') Cancel
+  script(src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+  script(defer='' src='https://use.fontawesome.com/releases/v5.0.7/js/all.js')
+
+
+//- append scripts 
+//-  script(src="./profileImg.js")            
+              
