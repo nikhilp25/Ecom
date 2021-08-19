@@ -16,7 +16,7 @@ for(let i=0;i<buyProduct.length;i++)
                                            let productId=buyProduct[i].getAttribute("prodid");
 
                                            console.log(productId);
-                                           let session=await axios.post("http://localhost:3000/api/booking/createPaymentSession",{productId:productId});
+                                           let session=await axios.post("https://ecommerseee.herokuapp.com/api/booking/createPaymentSession",{productId:productId});
                                            console.log(session);
                                            let sessId=session.data.session.id;
                                            let ans=await stripe.redirectToCheckout({sessionId:sessId});
