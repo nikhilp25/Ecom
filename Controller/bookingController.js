@@ -34,8 +34,8 @@ async function createPaymentSession(req,res){
                       },
                     ],
                     mode: 'payment',
-                    success_url: 'https://localhost:3000/',
-                    cancel_url: 'https://localhost:3000/',
+                    success_url: 'https://ecommerseee.herokuapp.com/',
+                    cancel_url: 'https://ecommerseee.herokuapp.com/',
                   })
                   res.json({
                       sessions
